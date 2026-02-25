@@ -25,7 +25,7 @@
             enable = lib.mkEnableOption "Steven Black's hosts file";
             enableIPv6 = lib.mkEnableOption "IPv6 rules" // {
               default = config.networking.enableIPv6;
-              defaultText = literalExpression "config.networking.enableIPv6";
+              defaultText = lib.literalExpression "config.networking.enableIPv6";
             };
             blockFakenews = lib.mkEnableOption "fakenews hosts entries";
             blockGambling = lib.mkEnableOption "gambling hosts entries";
